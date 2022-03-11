@@ -30,7 +30,6 @@ export class Feedback extends Component {
 	}
 
 	render() {
-
 		return (
 			<>
 				<Section title="Please leave feedback">

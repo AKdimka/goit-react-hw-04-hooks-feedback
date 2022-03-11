@@ -1,4 +1,5 @@
-import react from "react";
+import React from "react";
+import propTypes from "prop-types";
 
 const Section = ({ title, children }) => {
 	return (
@@ -8,6 +9,11 @@ const Section = ({ title, children }) => {
 			{children}
 		</section>
 	)
+}
+
+Section.propTypes = {
+	title: propTypes.string,
+	children: propTypes.node,
 }
 
 export default Section;
