@@ -1,11 +1,10 @@
 import React from "react";
+import { BtnsBox, Btn } from "./FeedbackOptions.styled";
 
-const FeedbackOptions = ({ onBtnClick }) => {
-	return (<div className="btns-box">
-		<button className="btn" name="good" onClick={onBtnClick}>Good</button>
-		<button className="btn" name="neutral" onClick={onBtnClick}>Neutral</button>
-		<button className="btn" name="bad" onClick={onBtnClick}>Bad</button>
-	</div>)
+export const FeedbackOptions = ({ onBtnClick }) => {
+	return (<BtnsBox>
+		<Btn name="good" onClick={onBtnClick}>Good</Btn>
+		<Btn name="neutral" onClick={onBtnClick}>Neutral</Btn>
+		<Btn name="bad" onClick={onBtnClick}>Bad</Btn>
+	</BtnsBox>)
 }
-
-export default FeedbackOptions;

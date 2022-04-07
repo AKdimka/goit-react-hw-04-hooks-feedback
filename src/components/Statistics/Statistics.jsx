@@ -1,24 +1,22 @@
 import React from "react";
-import propTypes from "prop-types";
-//import css from "../Statistics/Statistics.module.css"
+import PropTypes from "prop-types";
+import { StatisticsBox, StatisticsItem, Number } from "./Statistics.styled";
 
-const Statistics = ({ good, neutral, bad, total, positive }) => (
-	<div className="statistics">
-		<p className="text">Good:<span>{good}</span></p>
-		<p className="text">Neutral:<span>{neutral}</span></p>
-		<p className="text">Bad:<span>{bad}</span></p>
-		<p className="text">Total:{total}</p>
-		<p className="text">Positive feedback:{positive}%</p>
-	</div >
+
+export const Statistics = ({ good, neutral, bad, total, positive }) => (
+	<StatisticsBox>
+		<StatisticsItem>Good:<Number>{good}</Number></StatisticsItem>
+		<StatisticsItem>Neutral:<Number>{neutral}</Number></StatisticsItem>
+		<StatisticsItem>Bad:<Number>{bad}</Number></StatisticsItem>
+		<StatisticsItem>Total:<Number>{total}</Number></StatisticsItem>
+		<StatisticsItem>Positive feedback:<Number>{positive}%</Number></StatisticsItem>
+	</StatisticsBox >
 )
 
 Statistics.propTypes = {
-	good: propTypes.number.isRequired,
-	neutral: propTypes.number.isRequired,
-	bad: propTypes.number.isRequired,
-	span: propTypes.number.isRequired,
-	total: propTypes.number.isRequired,
-	positive: propTypes.number.isRequired,
+	good: PropTypes.number.isRequired,
+	neutral: PropTypes.number.isRequired,
+	bad: PropTypes.number.isRequired,
+	total: PropTypes.number.isRequired,
+	positive: PropTypes.string.isRequired,
 }
-
-export default Statistics;
