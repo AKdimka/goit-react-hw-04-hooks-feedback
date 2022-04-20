@@ -11,12 +11,6 @@ export const FeedbackOptions = ({ onBtnClick, options }) => {
 		</BtnsBox>)
 }
 
-/* 
-<Btn name="good" onClick={onBtnClick}>Good</Btn>
-<Btn name="neutral" onClick={onBtnClick}>Neutral</Btn>
-<Btn name="bad" onClick={onBtnClick}>Bad</Btn>
-*/
-
 FeedbackOptions.propTypes = {
 	onBtnClick: PropTypes.func.isRequired,
 	options: PropTypes.arrayOf(PropTypes.string).isRequired,
